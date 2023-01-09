@@ -37,7 +37,11 @@ contract CrowdFunding {
         return numberOfCampaings -1;
     }
 
-    function donateToCampaign(uint256 _id){}
+    function donateToCampaign(uint256 _id) public payable{
+        uint256 amount = msg.value;
+
+        Campaign storage campaing = campaigns[_id];
+    }
 
     function getDonators(){}
 
